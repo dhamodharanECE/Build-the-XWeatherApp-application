@@ -10,7 +10,8 @@ const App = () => {
     setInput(e.target.value);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
     if (!input.trim()) return;
 
     setLoading(true);
@@ -36,23 +37,22 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="App">
       <h1>X-WeatherApp Application</h1>
 
-      <div>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter city name"
-          name="weatherapp"
+          value={input}
           onChange={handleWeather}
         />
-        <button onClick={handleSubmit}>Search</button>
-      </div>
+        <button type="submit">Search</button>
+      </form>
 
-      {/* Loading message */}
-      {loading && <p>Loading data…</p>}
-
-      {/* Weather Data */}
+      {/* Loading message with exact text match */}
+      {loading && <p className="loading-message">Loading data...</p>}
+      
       {place && place.current && (
         <div className="weather-cards">
           <div className="weather-card">
@@ -66,6 +66,10 @@ const App = () => {
           <div className="weather-card">
             <h3>Condition</h3>
             <p>{place.current.condition.text}</p>
+            <img 
+              src={place.current.condition.icon} 
+              alt={place.current.condition.text}
+            />
           </div>
           <div className="weather-card">
             <h3>Wind Speed</h3>
