@@ -91,7 +91,7 @@ To pass the functional and structural requirements, your JSX must follow this st
 </div>
 
 
-Key Class Requirements:
+# Key Class Requirements:
 
 Class Name	Usage
 
@@ -104,66 +104,6 @@ weather-card	Each individual weather information card
 While the API request is in progress, display this message:
 
 <p>Loading data…</p>
-
-
-Ensure you use a <p> element for this text.
-
-🧠 Implementation Logic
-State Management:
-const [city, setCity] = useState("");
-const [weatherData, setWeatherData] = useState(null);
-const [loading, setLoading] = useState(false);
-
-API Call:
-const fetchWeatherData = async () => {
-  if (!city) return;
-  setLoading(true);
-  try {
-    const response = await fetch(
-      `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${city}`
-    );
-    if (!response.ok) throw new Error("Invalid city");
-    const data = await response.json();
-    setWeatherData(data);
-  } catch (error) {
-    alert("Failed to fetch weather data");
-    console.error("Error fetching data:", error);
-  } finally {
-    setLoading(false);
-  }
-};
-
-Rendering Logic:
-return (
-  <div className="app">
-    <input
-      type="text"
-      placeholder="Enter city name"
-      value={city}
-      onChange={(e) => setCity(e.target.value)}
-    />
-    <button onClick={fetchWeatherData}>Search</button>
-
-    {loading && <p>Loading data…</p>}
-
-    {weatherData && (
-      <div className="weather-cards">
-        <div className="weather-card">
-          Temperature: {weatherData.current.temp_c}°C
-        </div>
-        <div className="weather-card">
-          Humidity: {weatherData.current.humidity}%
-        </div>
-        <div className="weather-card">
-          Condition: {weatherData.current.condition.text}
-        </div>
-        <div className="weather-card">
-          Wind Speed: {weatherData.current.wind_kph} km/h
-        </div>
-      </div>
-    )}
-  </div>
-);
 
 ⚙️ Technologies Used
 
