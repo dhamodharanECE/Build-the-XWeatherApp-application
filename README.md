@@ -1,4 +1,5 @@
 🌦️ React Weather App
+
 🧾 Overview
 
 This project is a React-based weather application that provides real-time weather data for cities entered by the user.
@@ -17,7 +18,9 @@ https://api.weatherapi.com/v1/current.json
 Required Parameters:
 
 Parameter	Description	Example
+
 key	Your personal API key from WeatherAPI	1234567890abcdef
+
 q	City name entered by user	Pune
 
 👉 To get your own API key:
@@ -59,13 +62,13 @@ Once data is successfully retrieved, weather details appear in cards.
 
 When the user searches for "Pune", the weather data will be displayed like this:
 
-+---------------------------------------------+
-| Temperature: 27°C                           |
-| Humidity: 78%                               |
-| Condition: Partly Cloudy                    |
-| Wind Speed: 10 km/h                         |
-+---------------------------------------------+
+Temperature: 27°C   
 
+Humidity: 78%  
+
+Condition: Partly Cloudy    
+
+Wind Speed: 10 km/h                         
 
 Each metric is displayed inside a card element.
 
@@ -91,8 +94,11 @@ To pass the functional and structural requirements, your JSX must follow this st
 Key Class Requirements:
 
 Class Name	Usage
+
 weather-cards	Parent container div holding all weather cards
+
 weather-card	Each individual weather information card
+
 ⚠️ Loading State
 
 While the API request is in progress, display this message:
