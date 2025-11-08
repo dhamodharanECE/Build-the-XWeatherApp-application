@@ -1,29 +1,28 @@
-🌦️ React Weather App
+# 🌦️ React Weather App
 
-🧾 Overview
+# 🧾 Overview
 
 This project is a React-based weather application that provides real-time weather data for cities entered by the user.
 Users can search for any city to view its Temperature, Humidity, Weather Condition, and Wind Speed in a clean, card-based layout.
 
-The app uses the WeatherAPI
- to fetch live weather data.
+The app uses the WeatherAPI to fetch live weather data.
 
-🌍 API Information
+# 🌍 API Information
 
 Endpoint:
-
+```
 https://api.weatherapi.com/v1/current.json
+```
 
+ # Required Parameters:
 
-Required Parameters:
-
-Parameter	Description	Example
+# Parameter	Description	Example
 
 key	Your personal API key from WeatherAPI	1234567890abcdef
 
 q	City name entered by user	Pune
 
-👉 To get your own API key:
+# 👉 To get your own API key:
 
 Sign up at WeatherAPI.com
 
@@ -31,7 +30,7 @@ Go to My Account
 
 Copy your API Key
 
-🖥️ Application Flow
+# 🖥️ Application Flow
 🔹 Initial Render
 
 Upon the initial render:
@@ -61,7 +60,7 @@ Once data is successfully retrieved, weather details appear in cards.
 🔹 Example — Searching "Pune"
 
 When the user searches for "Pune", the weather data will be displayed like this:
-
+```
 Temperature: 27°C   
 
 Humidity: 78%  
@@ -69,7 +68,7 @@ Humidity: 78%
 Condition: Partly Cloudy    
 
 Wind Speed: 10 km/h                         
-
+```
 Each metric is displayed inside a card element.
 
 🔹 Invalid City Handling
@@ -79,17 +78,17 @@ show an alert message:
 
 Failed to fetch weather data
 
-🧱 Required Structure and Class Names
+# 🧱 Required Structure and Class Names
 
 To pass the functional and structural requirements, your JSX must follow this structure:
-
+```
 <div className="weather-cards">
   <div className="weather-card">Temperature: 27°C</div>
   <div className="weather-card">Humidity: 78%</div>
   <div className="weather-card">Condition: Partly Cloudy</div>
   <div className="weather-card">Wind Speed: 10 km/h</div>
 </div>
-
+```
 
 # Key Class Requirements:
 
@@ -99,13 +98,13 @@ weather-cards	Parent container div holding all weather cards
 
 weather-card	Each individual weather information card
 
-⚠️ Loading State
+# ⚠️ Loading State
 
 While the API request is in progress, display this message:
-
+```
 <p>Loading data…</p>
-
-⚙️ Technologies Used
+```
+# ⚙️ Technologies Used
 
 Technology	Purpose
 
@@ -117,20 +116,18 @@ CSS3 (Flexbox/Grid)	Styling weather cards
 
 JavaScript (ES6)	Logic and validation
 
-🚀 Setup Instructions
+# 🚀 Setup Instructions
 
 Clone the Repository
-
+```
 git clone https://github.com/dhamodharanECE/Build-the-XWeatherApp-application.git
-
+```
 cd Weather-App
 
-
 Install Dependencies
-
+```
 npm install
-
-
+```
 Add Your API Key
 
 Open the main file (e.g. App.js)
@@ -138,14 +135,14 @@ Open the main file (e.g. App.js)
 Replace "YOUR_API_KEY" with your actual WeatherAPI key
 
 Run the Application
-
+```
 npm start
-
+```
 Open in Browser
-
+```
 http://localhost:3000
-
-🧠 Learnings
+```
+# 🧠 Learnings
 
 Using React useState and useEffect for dynamic UI updates
 
@@ -155,16 +152,16 @@ Implementing loading and error states
 
 Designing flex-based layouts for weather cards
 
-📸 UI Overview:
+# 📸 UI Overview:
 
-Initial View:
+# Initial View:
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/7acd222c-a328-4e58-9646-57af3ff68c9c" />
 
-Dashboard View:
+# Dashboard View:
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/ba1c6add-1575-46cd-aeae-f93b14fcc10b" />
-
+```
 Weather Display:
 
 Temperature: 27°C
@@ -174,7 +171,8 @@ Humidity: 78%
 Condition: Cloudy
 
 Wind Speed: 12 km/h
+```
 
-Development Link:
+# Development Link:
 ```base
 https://build-the-x-weather-app-application.vercel.app/
