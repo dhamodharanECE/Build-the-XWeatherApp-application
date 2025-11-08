@@ -163,7 +163,9 @@ Designing flex-based layouts for weather cards
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/ba1c6add-1575-46cd-aeae-f93b14fcc10b" />
 
+
 ```
+
 Weather Display:
 
 Temperature: 27°C
