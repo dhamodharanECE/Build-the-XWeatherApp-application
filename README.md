@@ -3,6 +3,7 @@
 # 🧾 Overview
 
 This project is a React-based weather application that provides real-time weather data for cities entered by the user.
+
 Users can search for any city to view its Temperature, Humidity, Weather Condition, and Wind Speed in a clean, card-based layout.
 
 The app uses the WeatherAPI to fetch live weather data.
@@ -14,14 +15,14 @@ Endpoint:
 https://api.weatherapi.com/v1/current.json
 ```
 
- # Required Parameters:
+# Required Parameters:
 
 # Parameter	Description	Example
+```
+key	Your personal API key from WeatherAPI	1234567890abcdefq	
 
-key	Your personal API key from WeatherAPI	1234567890abcdef
-
-q	City name entered by user	Pune
-
+City name entered by user	Pune
+```
 # 👉 To get your own API key:
 
 Sign up at WeatherAPI.com
@@ -161,6 +162,7 @@ Designing flex-based layouts for weather cards
 # Dashboard View:
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/ba1c6add-1575-46cd-aeae-f93b14fcc10b" />
+
 ```
 Weather Display:
 
